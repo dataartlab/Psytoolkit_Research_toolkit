@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="stimuli.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.38628049"
+     inkscape:cx="799.12042"
+     inkscape:cy="366.40286"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="745"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       y="793.48297"
+       x="846.53516"
+       height="178.62668"
+       width="564.35675"
+       id="rect3031"
+       style="color:#000000;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:export-filename="errortype2.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129" />
+    <rect
+       style="color:#000000;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3029"
+       width="605.7774"
+       height="178.62668"
+       x="859.47913"
+       y="1044.5958"
+       inkscape:export-filename="errortype1.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129" />
+    <rect
+       style="color:#000000;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3830"
+       width="655.33777"
+       height="538.18237"
+       x="801.78204"
+       y="105.96645"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3798"
+       width="544.9408"
+       height="205.80902"
+       x="85.246178"
+       y="420.71915"
+       inkscape:export-filename="gosignal.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129" />
+    <rect
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect2993"
+       width="544.9408"
+       height="205.80902"
+       x="103.5517"
+       y="806.42688"
+       inkscape:export-filename="nogosignal.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#adff2f;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path3800"
+       sodipodi:cx="231.42857"
+       sodipodi:cy="475.21933"
+       sodipodi:rx="120"
+       sodipodi:ry="94.285713"
+       d="m 351.42857,475.21933 a 120,94.285713 0 1 1 -240,0 120,94.285713 0 1 1 240,0 z"
+       transform="matrix(2.1437177,0,0,1,-138.40096,48.404329)"
+       inkscape:export-filename="gosignal.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129" />
+    <path
+       transform="matrix(1.3318607,0,0,0.56585846,782.6223,-6.1369712)"
+       d="m 351.42857,475.21933 a 120,94.285713 0 1 1 -240,0 120,94.285713 0 1 1 240,0 z"
+       sodipodi:ry="94.285713"
+       sodipodi:rx="120"
+       sodipodi:cy="475.21933"
+       sodipodi:cx="231.42857"
+       id="path3765"
+       style="color:#000000;fill:#adff2f;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="arc"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#fa8072;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2985"
+       sodipodi:cx="231.42857"
+       sodipodi:cy="475.21933"
+       sodipodi:rx="120"
+       sodipodi:ry="94.285713"
+       d="m 351.42857,475.21933 a 120,94.285713 0 1 1 -240,0 120,94.285713 0 1 1 240,0 z"
+       transform="matrix(2.1437177,0,0,1,-120.09543,434.11208)"
+       inkscape:export-filename="nogosignal.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="355.77316"
+       y="509.30725"
+       id="text3802"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="gosignal.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129"><tspan
+         sodipodi:role="line"
+         id="tspan3804"
+         x="355.77316"
+         y="509.30725">GO</tspan><tspan
+         sodipodi:role="line"
+         x="355.77316"
+         y="559.30725"
+         id="tspan3806">Press the space bar</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3767"
+       y="266.85019"
+       x="1039.9047"
+       style="font-size:23.7169857px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       transform="scale(1.0478321,0.95435137)"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="266.85019"
+         x="1039.9047"
+         id="tspan3769"
+         sodipodi:role="line">GO</tspan><tspan
+         id="tspan3771"
+         y="296.49643"
+         x="1039.9047"
+         sodipodi:role="line">Press the space bar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="374.0787"
+       y="895.01501"
+       id="text2987"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="nogosignal.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="374.0787"
+         y="895.01501">NOGO</tspan><tspan
+         sodipodi:role="line"
+         x="374.0787"
+         y="945.01501"
+         id="tspan2991">Press nothing</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="820.96014"
+       y="145.50427"
+       id="text3792"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3794"
+         x="820.96014"
+         y="145.50427">In the following trials, only press the space</tspan><tspan
+         sodipodi:role="line"
+         x="820.96014"
+         y="180.50427"
+         id="tspan3796">bar if you see the message.</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3808"
+       y="368.8317"
+       x="820.96014"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         id="tspan3812"
+         y="368.8317"
+         x="820.96014"
+         sodipodi:role="line">Do nothing (no go) if you see the following</tspan><tspan
+         y="403.8317"
+         x="820.96014"
+         sodipodi:role="line"
+         id="tspan3816">message:</tspan></text>
+    <path
+       transform="matrix(1.321462,0,0,0.64055507,792.55552,196.71401)"
+       d="m 351.42857,475.21933 a 120,94.285713 0 1 1 -240,0 120,94.285713 0 1 1 240,0 z"
+       sodipodi:ry="94.285713"
+       sodipodi:rx="120"
+       sodipodi:cy="475.21933"
+       sodipodi:cx="231.42857"
+       id="path3818"
+       style="color:#000000;fill:#fa8072;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:10;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="arc"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text3820"
+       y="482.59659"
+       x="1118.4414"
+       style="font-size:25.13516617px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"
+       transform="scale(0.98099164,1.0193767)"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         y="482.59659"
+         x="1118.4414"
+         id="tspan3822"
+         sodipodi:role="line">NOGO</tspan><tspan
+         id="tspan3824"
+         y="514.01556"
+         x="1118.4414"
+         sodipodi:role="line">Press nothing</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="823.74872"
+       y="616.69067"
+       id="text3826"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="instructions.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3828"
+         x="823.74872"
+         y="616.69067">Now, press the space bar to start!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="1124.6445"
+       y="848.43903"
+       id="text3019"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="errortype2.png"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-ydpi="48.654129"><tspan
+         sodipodi:role="line"
+         x="1124.6445"
+         y="848.43903"
+         id="tspan3021">Error</tspan><tspan
+         sodipodi:role="line"
+         x="1124.6445"
+         y="898.43903"
+         id="tspan3025">You should have pressed</tspan><tspan
+         id="tspan3023"
+         sodipodi:role="line"
+         x="1124.6445"
+         y="948.43903">the button, but you did not</tspan></text>
+    <text
+       inkscape:export-ydpi="48.654129"
+       inkscape:export-xdpi="48.654129"
+       inkscape:export-filename="errortype1.png"
+       sodipodi:linespacing="125%"
+       id="text3009"
+       y="1104.7295"
+       x="1160.8877"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+       xml:space="preserve"><tspan
+         id="tspan3013"
+         y="1104.7295"
+         x="1160.8877"
+         sodipodi:role="line">Error</tspan><tspan
+         y="1154.7295"
+         x="1160.8877"
+         sodipodi:role="line"
+         id="tspan3027">You should not have pressed</tspan><tspan
+         y="1204.7295"
+         x="1160.8877"
+         sodipodi:role="line"
+         id="tspan3017">the button, but you did</tspan></text>
+  </g>
+</svg>

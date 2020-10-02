@@ -1,0 +1,241 @@
+options
+  bitmapdir stimuli
+  sounddir stimuli
+  set &maxrt 3000 # stimulus presentation
+  set &iti 2000  # intertrial interval
+  set &choosechance 3 # 1 in 4 are matching
+  mouse on
+  
+sounds
+  sound_good yay.mp3
+  sound_bad  oops.mp3
+
+fonts
+  arial 18
+
+bitmaps
+  letterA ## 15 letters
+  letterB
+  letterC
+  letterD
+  letterE
+  letterH
+  letterI
+  letterK
+  letterL
+  letterM
+  letterO
+  letterP
+  letterR
+  letterS
+  letterT
+  overlay
+  instruction1
+  instruction2
+  instruction3
+  instructions6
+  instructions7
+  template
+  break1
+  practiceover
+  endexperiment
+  practicestart
+  totalstart
+
+## a part is a reusable piece of code. In this case, it gives for the
+## 3 blocks the feedback
+
+part myfeedback
+  feedback
+    text align left
+    set &Total1 count ; select c8 == 1 && c1 == BLOCKNUMBER ## number of trials where there was a 2back item
+    set &Total2 count ; select c8 > 1 && c1 == BLOCKNUMBER ## number of trials where there was NOT a 3back item
+    set &Matches count     ; select c4 == 1 && c1 == BLOCKNUMBER ## number of matches
+    set &Misses count      ; select c5 == 1 && c1 == BLOCKNUMBER ## number of misses
+    set &FalseAlarms count ; select c6 == 1 && c1 == BLOCKNUMBER ## number of false alarms
+    set &MatchesPerc      expression &Matches     / &Total1 * 100.0
+    set &MissesPerc       expression &Misses      / &Total1 * 100.0
+    set &FalseAlarmsPerc  expression &FalseAlarms / &Total2 * 100.0
+    text -250 -200 "There were 25 trials in total in this block"
+    text -250 -150 &Total1 ; prefix "Total trials that had a match:"
+    text -250 -100 &Total2 ; prefix "Total trials that had no match:"
+    text -250 -50 &Matches ; prefix "Number of correctly matched items:"
+    text -250 -0 &Misses ; prefix "Number of missed items:"
+    text -250  50 &FalseAlarms ; prefix "Number of false alarms:"
+    text -250 100 &MatchesPerc ; prefix "Percentage correct matches:" ; postfix " %"
+    text -250 150 &MissesPerc  ; prefix "Percentage missed items:" ; postfix " %"
+    text -250 200 &FalseAlarmsPerc ; prefix "Percentage false alarms:" ; postfix " %"
+    text -250 250 "Click mouse to continue and show data"
+    wait_for_key mouse
+  end
+
+task nback_learning
+  set &trialcount increase
+  set $currentletter random 1 15 ## choose randomw letter, might be overridden
+  ############################################################################
+  ## is this condition a yes condition?
+  set $memory random 1 &choosechance ## 1 in &choosechance trials will be matching trial
+  ## if a 2back trial (there must have been at least 2 trials before for this to be possible)
+  if $memory == 1 && &trialcount > 2
+    set $currentletter &nback2
+    set $requiredresponse 1 ## this is a MATCH, so response is required
+  fi
+  ## if a NON 2back trial
+  if $memory != 1 || &trialcount <= 2 ## chose a letter but not that of 2 trials ago
+    set $currentletter random 1 15
+    while $currentletter == &nback2 ## choose anything but NOT that of 2 back
+      set $currentletter random 1 15
+    while-end
+    set $requiredresponse 2 ## this is a NON-match, so people need to withhold
+  fi
+  ############################################################################
+  ## this part is the only part that is different between learning and non-learning
+  draw off
+    show bitmap $currentletter ## stimulus 1
+    ## now show previous trials
+    if &trialcount > 1
+      show bitmap &nback1 -100 0     # show 1-back left of stimulus
+      show bitmap overlay -100 0  # greyed out
+    fi
+    if &trialcount > 2
+      show bitmap &nback2 -200 0     # show 2-back left of stimulus
+      show bitmap overlay -200 0  # greyed out
+    fi
+  draw on
+  ######################################################################
+  readmouse l 1 &maxrt ## click the first bitmap in this task
+  ############################################################################
+  ## the different possible response outcomes
+  ##
+  if $requiredresponse == 1 and STATUS != TIMEOUT
+    set $score 1 ## means good
+    set $match 1
+    sound sound_good
+  fi
+  if $requiredresponse == 1 and STATUS == TIMEOUT
+    set $score 0 ## means wrong -- miss
+    set $miss 1
+    sound sound_bad
+  fi
+  if $requiredresponse == 2 and STATUS == TIMEOUT
+    set $score 1 ## means good
+  fi
+  if $requiredresponse == 2 and STATUS != TIMEOUT
+    set $score 0 ## means wrong
+    set $false_alarm 1
+    sound sound_bad
+  fi
+  #
+  ######################################################################
+  #
+  set $extrawait expression &maxrt - RT ## how much time is left between max RT and now?
+  delay $extrawait ## wait until letter has been on screen total of 2000 ms
+  clear screen
+  delay 2000 ## wait 2000 ms
+  #
+  ### now save the letter for next trial
+  #
+  set &nback2 &nback1
+  set &nback1 $currentletter
+  ### save the data
+  save BLOCKNUMBER &trialcount $score $match $miss $false_alarm RT $memory $currentletter &nback1 &nback2
+
+task nback_normal
+  set &trialcount increase
+  set $currentletter random 1 15 ## choose randomw letter, might be overridden
+  ############################################################################
+  ## is this condition a yes condition?
+  set $memory random 1 &choosechance ## 1 in &choosechance trials will be matching trial
+  ## if a 2back trial (there must have been at least 2 trials before for this to be possible)
+  if $memory == 1 && &trialcount > 2
+    set $currentletter &nback2
+    set $requiredresponse 1 ## this is a MATCH, so response is required
+  fi
+  ## if a NON 2back trial
+  if $memory != 1 || &trialcount <= 2 ## chose a letter but not that of 2 trials ago
+    set $currentletter random 1 15
+    while $currentletter == &nback2 ## choose anything but NOT that of 2 back
+      set $currentletter random 1 15
+    while-end
+    set $requiredresponse 2 ## this is a NON-match, so people need to withhold
+  fi
+  ############################################################################
+  ## this part is the only part that is different between learning and non-learning
+  draw off
+    show bitmap $currentletter ## stimulus 1
+  draw on
+  ######################################################################
+  readmouse l 1 &maxrt ## click the first bitmap in this task
+  ############################################################################
+  ## the different possible response outcomes
+  ##
+  if $requiredresponse == 1 and STATUS != TIMEOUT
+    set $score 1 ## means good
+    set $match 1
+    sound sound_good
+  fi
+  if $requiredresponse == 1 and STATUS == TIMEOUT
+    set $score 0 ## means wrong -- miss
+    set $miss 1
+    sound sound_bad
+  fi
+  if $requiredresponse == 2 and STATUS == TIMEOUT
+    set $score 1 ## means good
+  fi
+  if $requiredresponse == 2 and STATUS != TIMEOUT
+    set $score 0 ## means wrong
+    set $false_alarm 1
+    sound sound_bad
+  fi
+  #
+  ######################################################################
+  #
+  set $extrawait expression &maxrt - RT ## how much time is left between max RT and now?
+  delay $extrawait ## wait until letter has been on screen total of 2000 ms
+  clear screen
+  delay 2000 ## wait 2000 ms
+  #
+  ### now save the letter for next trial
+  #
+  set &nback2 &nback1
+  set &nback1 $currentletter
+  ### save the data
+  save BLOCKNUMBER &trialcount $score $match $miss $false_alarm RT $memory $currentletter &nback1 &nback2
+
+block training
+  set &trialcount 0 # make sure you use this again if you have another block
+  message instructions6
+  message instructions7
+  message template
+  message practicestart
+  tasklist
+    nback_learning 25
+  end
+
+
+block normal1
+  set &trialcount 0 # make sure you use this again if you have another block
+  message totalstart
+  tasklist
+    nback_normal 25
+  end
+
+
+block normal2
+  set &trialcount 0 # make sure you use this again if you have another block
+  message break1 mouse
+  tasklist
+    nback_normal 25
+  end
+
+
+block normal3
+  set &trialcount 0 # make sure you use this again if you have another block
+  message break1 mouse
+  tasklist
+    nback_normal 25
+  end
+  message endexperiment
+  
+
+

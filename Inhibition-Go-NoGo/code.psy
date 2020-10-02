@@ -1,0 +1,112 @@
+bitmaps
+  instructions1
+  instructions2
+  instructions3
+  instructions4
+  instructions5
+  break1
+  resume1
+  gosignal
+  nogosignal
+  errortype1
+  errortype2
+
+task gopractice
+  keys space
+  set $errorstatus 0
+  show bitmap gosignal
+  readkey 1 2000 # wait 2 seconds for key to be pressed
+  clear 1
+  if STATUS == TIMEOUT
+    set $errorstatus 1
+    show bitmap errortype2
+    delay 3000
+    clear 2
+  fi    
+  delay 500 # intertrial interval
+
+task nogopractice
+  keys space
+  set $errorstatus 0
+  show bitmap nogosignal
+  readkey 1 2000
+  clear 1
+  if STATUS != TIMEOUT  ## there should be a TIME OUT, so if not, we have a mistake
+    set $errorstatus 1
+    show bitmap errortype1
+    delay 3000
+    clear 2
+  fi    
+  delay 500 # intertrial interval
+
+task go
+  keys space
+  set $errorstatus 0
+  show bitmap gosignal
+  readkey 1 2000 # wait 2 seconds for key to be pressed
+  clear 1
+  if STATUS == TIMEOUT
+    set $errorstatus 1
+    show bitmap errortype2
+    delay 3000
+    clear 2
+  fi    
+  delay 500 # intertrial interval
+  save TASKNAME RT $errorstatus 
+
+task nogo
+  keys space
+  set $errorstatus 0
+  show bitmap nogosignal
+  readkey 1 2000
+  clear 1
+  if STATUS != TIMEOUT  ## there should be a TIME OUT, so if not, we have a mistake
+    set $errorstatus 1
+    show bitmap errortype1
+    delay 3000
+    clear 2
+  fi    
+  delay 500 # intertrial interval
+  save TASKNAME RT $errorstatus 
+
+task endtask
+  show bitmap instructions5
+  delay 5000
+
+# -------------------------------------
+
+message instructions1
+message instructions2
+message instructions3
+
+block pracice
+  tasklist
+    gopractice 8
+    nogopractice 2
+  end
+
+message instructions4
+
+block test
+  tasklist
+    go 38
+    nogo 12
+  end
+  bitmap break1
+  delay 30000
+
+message resume1
+
+block test2
+  tasklist
+    go 37
+    nogo 13
+  end
+
+
+block endblock
+  tasklist
+    endtask 1
+  end
+
+
